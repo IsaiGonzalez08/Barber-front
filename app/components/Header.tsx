@@ -1,5 +1,7 @@
+import { Button } from "@/components/ui/button"
 import Image from "next/image";
-import LogoBarber from "../../assets/bardeylogo.svg"
+import LogoBarber from "../../assets/icons/bardeylogo.svg"
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -13,10 +15,10 @@ export default function Header() {
                     <li className="text-white">Contáctanos</li>
                 </ul>
                 <div className="h-8 w-[1px] bg-white"/>
-                <div>
-                    <button className="bg-white text-black">Iniciar sesión</button>
+                <div className="flex gap-4">
+                    <Button variant="outline"><Link href="/register">Registrarse</Link></Button>
+                    <Button><Link href="/login">Iniciar sesión</Link></Button>
                 </div>
-
             </div>
         </header>
     )
